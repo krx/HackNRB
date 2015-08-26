@@ -10,7 +10,7 @@ white = 255,255,255
 
 screen = pygame.display.set_mode(size)
 
-world = World(50, 50)
+world = World(pygame.Rect(5,5,400,400), 50, 50)
 
 while 1:
     for event in pygame.event.get():
