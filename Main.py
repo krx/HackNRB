@@ -1,5 +1,5 @@
 import sys,pygame
-
+from World import World
 
 def display_bordered_text(screen, msg, pos):
     fobj = pygame.font.SysFont('Lucida Console', 18)

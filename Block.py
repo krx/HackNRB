@@ -1,15 +1,11 @@
 import pygame
 
-class Block():
-    def __init__(self, world, x, y, color):
-        super(Block, self).__init__(x, y)
+class Block:
+    def __init__(self, world, color, x=0, y=0):
+        self.world = world
         self.color = color
-
-    def getX(self):
-        return self.x
-
-    def getY(self):
-        return self.y
+        self.x = x
+        self.y = y
 
     def draw(self, surface, rect):
         pygame.draw.rect(surface, self.color, rect)
