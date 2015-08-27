@@ -76,9 +76,10 @@ except SerialException:
     print("Failed to connect to serial")
 
 q = ''
+running = True
 def serialThread():
     global q
-    while 1:
+    while running:
         q = serialRead(s)
 
 threading.Thread(target=serialThread).start()
@@ -94,6 +95,7 @@ updateInterval = baseInterval // snake.length
 while 1:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
+            running = False
             sys.exit()
         if gameStage == 0:
             if event.type == pygame.KEYDOWN:
