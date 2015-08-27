@@ -1,6 +1,6 @@
 import pygame
 
-class Block:
+class Block(object):
     def __init__(self, world, color, x=0, y=0):
         self.world = world
         self.color = color

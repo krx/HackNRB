@@ -14,9 +14,8 @@ screen = pygame.display.set_mode(size)
 
 world = World(pygame.Rect(210,10,580,580), 50, 50)
 snake = world.snake
-snake.headX = 47
 
-baseInterval = 600
+baseInterval = 300
 updateInterval = baseInterval // snake.length
 lastUpdate = current_milli_time()
 while 1:
